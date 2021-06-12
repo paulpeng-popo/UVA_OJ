@@ -1,0 +1,11 @@
+把每個讀入的 preOrder tree 第一個 字元記錄下來
+接著在 inOrder tree 中找出該字元的索引位置
+然後從 該位置將字串分成兩串 divide and conquer
+停止遞迴條件
+	1. 字串長度剩一個字元
+		印出字元，並 rootindex += 1
+	2. 字串左遞迴為空，也就是該分割字元為 root
+	3. rootindex 大於字串長度
+		return stack
+否則重複分割字串
+直到遞迴結束

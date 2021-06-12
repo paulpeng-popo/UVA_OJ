@@ -1,0 +1,12 @@
+先算出 main board 總共有幾個 pixels
+再利用 c++ set 收集 每個 sub-board 的 pixels 座標
+
+loop i from min(s.x, d.x) to max(s.x, d.x)
+    loop j from min(s.y, d.y) to max(s.y, d.y)
+        myset.insert(Position(i, j));
+
+set 具有 unique 的特性
+因此當有 sub-board 的 pixels 座標重複時
+set 能自動排除該重複的座標
+最後將 total_spots 扣掉 set.size()
+即可得出剩餘面積

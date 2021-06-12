@@ -1,0 +1,9 @@
+宣告set  alpha[5], beta[5], Iwant[5]
+第一個grid的每一列每個字母存入對應Index的alpha set
+第二撥個grid的每一列每個字母存入對應Index的beta set
+這樣可以避免重複的字元被輸入
+再利用set_intersection函式，把alpha跟beta交集的集合存入Iwant set
+接著利用function遞迴把五階層的Iwant set做排列組合並存入vector
+
+再利用讀進來的k找出第的k-1個存入的string印出即可
+若k大於vector的 size，則 print “NO”

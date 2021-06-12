@@ -1,0 +1,15 @@
+建立 vector 陣列 edges[5005] 存放 graph 點與點的關係
+因為 題目說 graph 的點最多為5000個 並空出 index 0 使陣列從 1 開始存 所以固定大小 5005
+題目說 會有 n-1 條邊被輸入，但因為是無向圖，所以
+        edges[row].push_back(col);
+        edges[col].push_back(row);
+使陣列資料對稱
+接著題目會給兩點，求兩點間的路徑長
+因為是找路徑，所以使用 DFS (迷宮法) 或是 backtracking
+隨機挑其中一點 當作起點
+當走到另一點後即 return true
+取得路徑長後，觀察是否為 偶數
+true:
+	jump forever 中間兩點
+false:
+	meet at 中間那點

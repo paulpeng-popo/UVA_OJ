@@ -1,0 +1,15 @@
+將輸入的藥品 分別存入 vector 與 priority queue 
+再透過 priority queue 每次取出 頻率最小的 藥品
+bool operator<(const Medicine &med) const
+{
+    if(take_time != med.take_time)
+        return take_time > med.take_time;
+    return priority > med.priority;
+}
+取出後，將該藥品從 queue 中刪除
+接著將該藥品 之 taken time 加上 vector 中 該藥品之原本 頻率
+再重新 insert 進 queue，而 prioirty queue 會幫我們依照 吃藥之 優先順序排好
+	freq 小的 優先取
+	freq 一樣 --> 再比較 其 priority
+	priority 小的 優先取
+cases 迴圈完後 program 結束

@@ -1,0 +1,12 @@
+先建立 struct 結構為 int ascii 跟 int count 分別存放
+出現的 字元的 ascii code 和他的出現頻率
+因為 ascii code 可能出現 空白字元 所以利用 getline 取得每行輸入
+
+利用 回圈將字串遍歷 並做以下:
+	將字元轉成 ascii code
+	排除 ascii code 小於 32 之字元
+	將 符合之字元存入 結構內
+	並將其 count += 1
+
+將結構陣列 以 "count 小 ascii 大" 之優先順序排列
+最後輸出 ascii number 和 count

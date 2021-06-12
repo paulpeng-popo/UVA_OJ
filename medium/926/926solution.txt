@@ -1,0 +1,14 @@
+此題關鍵: total 要用 long long int 計算
+因為 30 x 30 的 roads 再不計算障礙物的情況下，仍會過 INT MAX 和 LONG INT MAX
+解法流程:
+	紀錄起點和終點後，宣告一個 vector array
+	element 為一個 structure:
+	bool 存放該位置之南方及西方是否可到達
+	long long 存放累計到達此位置共有幾種走法
+
+	Set_barrier 輸入哪條街不能走，
+	將 N, W, S, E 換成統一的 S, W，點座標則依情況 x+=1 或 y+=1
+	Calculate 則將 vector array 從 i, j == 1 到 size
+	計算來自其西方及南方的 long long int 相加，接著存入自己的 long long int
+	最後輸出即可
+** 每個 case 結束可順便 clear vector 減少記憶體空間浪費

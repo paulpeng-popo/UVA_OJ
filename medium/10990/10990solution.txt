@@ -1,0 +1,8 @@
+先利用歐拉公式建 phi 函數表
+可用高斯 divisor sum property: for every a|n denoted as b, that sigma{phi(b)} = n
+for example: phi(1) + phi(2) + phi(4) + phi(8) = 1 + 1 + 2 + 4 = 8
+因此我們可用 phi(n) = n - phi(n的所有因數) 時間為 O(n*log(n))
+接著，在 depthphi 上
+我們發現 depthphi(n) = 1 + depthphi(phi(n)), when n = 2 return phi(n) = 1
+因此可使用 recursive and record 法
+將輸入讀入後，依序遞迴找出深度，在全部相加即為答案

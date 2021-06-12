@@ -1,0 +1,16 @@
+使用 2 個 Queue 和 1 個 Map:
+queue<int> teams_order: 大隊伍的隊伍編號的先後順序
+queue<int>  teams[num]: 每個隊伍成員的排隊先後順序
+map<int, int> tag: 每個成員編號對應的隊伍編號
+並遵循下列規則:
+  　1. ENQUEUE num:
+	先確認 num 的隊伍有無在大隊伍
+	也就是 test teams[i] 是否為空，
+		為空: teams_order.push num 所在的 team 的編號 i，且 teams[i].push(num)
+		不為空: teams[i].push(num)
+　　2. DEQUEUE: 
+	取出大隊伍的最前面隊伍編號 i = teams_order.front()
+	再將編號的隊伍最前面成員取出並刪除 print teams[i].front() && teams[i].pop()
+	test teams[i] 是否為空
+		為空: 將此隊伍編號 i 從大隊伍刪除
+		不為空: 結束

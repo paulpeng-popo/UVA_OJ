@@ -1,0 +1,13 @@
+輸入每一行的 maze
+將裡面所有 S, E, ., #
+的符號一一記錄
+並同時清空或填滿 bestMoves 對應該位置的值
+
+紀錄完後，宣告兩組 Location 存 開始 跟 結束位置
+之後便用 BFS + QUEUE 找出所有可行路徑
+因為陣列太大 所以不能直接6^(30*30*30)的一個一個找
+絕對會超時，同時要避免走過的路徑被重複走到
+需加入 Qualified() 跟 nextSteps < bestMoves[x][y][z] 條件
+來限制 graph tree 無窮的長下去。
+
+最後根據回傳值 決定輸出 Escaped .. 或 Trapped! 即可

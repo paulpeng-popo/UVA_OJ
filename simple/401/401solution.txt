@@ -1,0 +1,8 @@
+把題目給的 mirror characters 做成 dictionary 對照表
+然後建立 flag : mirror --> if mirror == true: str is mirrored string
+                           else : str is not a mirrored string
+當字串前半的 character dictionary keys 皆為後半 character dictionary values 時
+把 mirror 變數設為 ture，否則為 false
+再將題目輸入的 str，反著 scan 複製一份存入變數 test
+當 str == test 時，代表 str 具有 palindrome 特性
+之後建立巢狀 if-else，為四種情況做不同的輸出

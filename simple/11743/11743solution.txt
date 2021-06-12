@@ -1,0 +1,7 @@
+ getline Τ拜肈
+┮ ┦эノ 4 Ω cin 弄 俱︽ credit number
+礛ㄌ酚 index 盢 计   计
+                             案计 
+程耞 sum 琌 Ю计琌 0
+琌: Valid
+: Invalid

@@ -1,0 +1,10 @@
+建立 int 陣列，其大小為 128 紀錄 每種 asci 字元出現的頻率
+並初始化陣列 全部設為 0
+while(getline) 讀入每一行的字串 存入變數 str
+ScanChar 函式 將傳入的 str 中 每一個字元做判斷
+如果是 a~z or A~Z 則將 陣列 asci 中 代表該字元的索引值 的變數位置 +1
+即 ` asci[str[i]] += 1; `
+ShowMost 函式 會找出陣列中 值最大的 max
+再將陣列中所有值為 max 的索引值之 asci 碼 印出
+即 ` cout << (char) i; `
+最後每做一次 while，便將陣列歸 0，直到輸入結束

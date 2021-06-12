@@ -1,0 +1,13 @@
+使用 dynamic programming 技巧
+宣告陣列 dp[1000][1000]
+輸入字串存入 str
+初始化 dp[1000][1000]
+呼叫 palindrome(0, size-1)
+
+palindrome 流程:
+	如果 a >= b return 0; // 代表在對角線以下，為邊界條件
+	如果 dp[a][b] == -1   // 代表該子問題尚未被解決
+		當 str[a] == str[b]: dp[a][b] = dp[a+1][b-1];
+		當 str[a] != str[b]: dp[a][b] = 1+min(dp[a+1][b-1], dp[a+1][b], dp[a][b-1])
+	最後回傳 dp[a][b];
+輸出 ans = palindrome(0, size-1) 即可
